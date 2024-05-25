@@ -44,12 +44,8 @@ export default function Intro() {
         <span>A software engineer who is passionate about building innovative and scalable 
         solutions. My focus is in websites, application development, and system integrations.</span>
         <br/>
-        {/* <span>I'm a full-stack developer based in North Carolina. After serving 5 years in the 
-        Marine Corps as an All-Source Intelligence Analyst, I discovered my passion for software development.
-        I'm more than halfway through earning my B.S. in Software Development & Security, and recently graduated 
-        from Prime Digital Academy's Full-Stack Software Engineering program. </span> */}
-        
       </motion.h1>
+      
       <motion.div className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4'
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
