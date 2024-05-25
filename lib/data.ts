@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import weatherHubImg from '@/public/weatherHub.png';
+import casalogueImg from '@/public/casalogue-img.png';
 
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
@@ -66,21 +66,22 @@ export const projectsData = [
     description:
       "I completed this project in a 2-week duration. It's a home maintenance management application where users can sign into their account and manage all home-related upkeep tasks.",
     tags: ["React", "Redux", "JavaScript", "Postgres", "Semantic UI", "FullCalendar"],
-    
+    imageUrl: casalogueImg,
+
   },
   {
     title: "WeatherHub",
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind"],
-    
+    imageUrl: weatherHubImg,
   },
   {
     title: "In progress",
     description:
       "Enter description text here...",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    
+    imageUrl: weatherHubImg,
   },
 ] as const;
 
