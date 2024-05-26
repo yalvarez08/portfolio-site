@@ -35,28 +35,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Full-Stack Software Engineer",
+    company: "Prime Digital Academy",
     description:
       "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "Nov 2023 - Apr 2024",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Geospatial Production Analyst",
+    company: "Geo Owl, LLC.",
     description:
       "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "Feb 2023 - Oct 2023",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Full Motion Video Analyst",
+    company: "FGS, LLC.",
     description:
       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "Jan 2022 - June 2022",
   },
 ] as const;
 
@@ -67,7 +67,6 @@ export const projectsData = [
       "I completed this project in a 2-week duration. It's a home maintenance management application where users can sign into their account and manage all home-related upkeep tasks.",
     tags: ["React", "Redux", "JavaScript", "Postgres", "Semantic UI", "FullCalendar"],
     imageUrl: casalogueImg,
-
   },
   {
     title: "WeatherHub",
@@ -95,14 +94,9 @@ export const skillsData = [
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
   "MongoDB",
   "Redux",
-  "GraphQL",
-  "Apollo",
   "Express",
   "PostgreSQL",
-  "Python",
-  "Django",
   "Framer Motion",
 ] as const;

@@ -1,14 +1,14 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from "framer-motion"
 import { links } from '@/lib/data'
 import clsx from 'clsx'
 import Link from 'next/link'
-
+import { useActiveSectionContext } from '@/context/ActiveSectionContext'
 
 export default function Header() {
-    // used to keep track of state; which section of the page is being viewed
-    const [activeSection, setActiveSection] = useState("Home");
+    // using context api to track active state; which section of the page is being viewed
+    const {activeSection, setActiveSection, setLastClick} = useActiveSectionContext();
 
   return (
     <header className='z-[999] relative'>
@@ -31,6 +31,10 @@ export default function Header() {
                       activeSection === link.name,
                     }
                     )}href={link.hash}
+                    onClick={() => {
+                        setActiveSection(link.name);
+                        setLastClick(Date.now());
+                      }}
                     >
                     {link.name}
                     {link.name === activeSection && (

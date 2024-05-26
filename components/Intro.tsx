@@ -3,15 +3,20 @@
 import Image from 'next/image'
 import React from 'react'
 import { easeIn, motion } from 'framer-motion'
-import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { FaGithub } from 'react-icons/fa'
+import { usePartInView } from '@/lib/hooks'
+
 
 export default function Intro() {
+  const {ref} = usePartInView("Home", 0.5);
+
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]" id="home">
+    <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]" 
+    id="home"
+    ref={ref}>
         <div className='flex items-center justify-center'>
             <div className='relative'>
                 <motion.div initial={{opacity: 0, scale: 0}} animate={{opacity: 1, scale: 1}} transition={{type: "tween", duration: 0.2, ease: "easeIn"}}>
