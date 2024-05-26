@@ -24,10 +24,6 @@ export const links = [
     hash: "#skills",
   },
   {
-    name: "Experience",
-    hash: "#experience",
-  },
-  {
     name: "Contact",
     hash: "#contact",
   },
@@ -58,6 +54,14 @@ export const experiencesData = [
     icon: React.createElement(FaReact),
     date: "Jan 2022 - June 2022",
   },
+  {
+    title: "Intelligence Analyst",
+    company: "U.S. Marine Corps",
+    description:
+      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+    icon: React.createElement(FaReact),
+    date: "May2017 - Jan 2022",
+  }
 ] as const;
 
 export const projectsData = [
