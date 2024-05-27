@@ -17,11 +17,13 @@ export default function About() {
     transition={{ delay: 0.175 }}
     >
         <SectionHeading>About Me</SectionHeading>
-       <p className="mb-3">
+       <p>
         <span className='font-medium'>I'm a full-stack developer based in North Carolina. After serving 5 years in the 
         Marine Corps as an All-Source Intelligence Analyst, I discovered my passion for software development.
         I'm more than halfway through earning my B.S. in Software Development & Security, and recently graduated 
-        from Prime Digital Academy's Full-Stack Software Engineering program.</span>
+        from Prime Digital Academy's Full-Stack Software Engineering program. Identifying gaps/issues and providing 
+        solutions is what I enjoy most in this field. As a developer, I continuously push myself through challenges and 
+        thrive in collaborative, dynamic, and avant-garde environments. </span>
          </p>
     </motion.section>
   )
