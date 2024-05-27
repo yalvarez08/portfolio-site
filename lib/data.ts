@@ -4,6 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import weatherHubImg from '@/public/weatherHub.png';
 import casalogueImg from '@/public/casalogue-img.png';
+import appGameImg from '@/public/appGame.jpeg'
 
 
 export const links = [
@@ -34,7 +35,7 @@ export const experiencesData = [
     title: "Full-Stack Software Engineer",
     company: "Prime Digital Academy",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "",
     icon: React.createElement(LuGraduationCap),
     date: "Nov 2023 - Apr 2024",
   },
@@ -42,7 +43,7 @@ export const experiencesData = [
     title: "Geospatial Production Analyst",
     company: "Geo Owl, LLC.",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "",
     icon: React.createElement(CgWorkAlt),
     date: "Feb 2023 - Oct 2023",
   },
@@ -50,7 +51,7 @@ export const experiencesData = [
     title: "Full Motion Video Analyst",
     company: "FGS, LLC.",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "",
     icon: React.createElement(FaReact),
     date: "Jan 2022 - June 2022",
   },
@@ -58,7 +59,7 @@ export const experiencesData = [
     title: "Intelligence Analyst",
     company: "U.S. Marine Corps",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "",
     icon: React.createElement(FaReact),
     date: "May2017 - Jan 2022",
   }
@@ -69,22 +70,22 @@ export const projectsData = [
     title: "Casalogue",
     description:
       "I completed this project in a 2-week duration. It's a home maintenance management application where users can sign into their account and manage all home-related upkeep tasks.",
-    tags: ["React", "Redux", "JavaScript", "Postgres", "Semantic UI", "FullCalendar"],
+    tags: ["React", "JavaScript", "Postgres", "Semantic UI", "FullCalendar"],
     imageUrl: casalogueImg,
   },
   {
     title: "WeatherHub",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+      "Weather forecast application. It features a fluid and seamless UI for searching weather based on location.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind"],
     imageUrl: weatherHubImg,
   },
   {
-    title: "In progress",
+    title: "Memory Game",
     description:
-      "Enter description text here...",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: weatherHubImg,
+      "Currently in progress...",
+    tags: ["C#", ".NET Core"],
+    imageUrl: appGameImg,
   },
 ] as const;
 
@@ -93,12 +94,13 @@ export const skillsData = [
   "CSS",
   "JavaScript",
   "TypeScript",
+  "C#",
   "React",
   "Next.js",
   "Node.js",
   "Git",
+  ".NET",
   "Tailwind",
-  "MongoDB",
   "Redux",
   "Express",
   "PostgreSQL",

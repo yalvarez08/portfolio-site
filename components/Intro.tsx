@@ -2,8 +2,9 @@
 
 import Image from 'next/image'
 import React from 'react'
-import { easeIn, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useActiveSectionContext } from '@/context/ActiveSectionContext'
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { FaGithub } from 'react-icons/fa'
@@ -11,7 +12,8 @@ import { usePartInView } from '@/lib/hooks'
 
 
 export default function Intro() {
-  const {ref} = usePartInView("Home", 0.5);
+  const {ref} = usePartInView("Home");
+  const { setActiveSection, setLastClick } = useActiveSectionContext();
 
   return (
     <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]" 
@@ -19,7 +21,8 @@ export default function Intro() {
     ref={ref}>
         <div className='flex items-center justify-center'>
             <div className='relative'>
-                <motion.div initial={{opacity: 0, scale: 0}} animate={{opacity: 1, scale: 1}} transition={{type: "tween", duration: 0.2, ease: "easeIn"}}>
+                <motion.div 
+                initial={{opacity: 0, scale: 0}} animate={{opacity: 1, scale: 1}} transition={{type: "tween", duration: 0.2, ease: "easeIn"}}>
                 <Image
                 src="https://res.cloudinary.com/ydcalvarez/image/upload/v1716651865/my-photo.jpg"
                 width="190"
@@ -57,10 +60,12 @@ export default function Intro() {
       transition={{ delay: 0.1 }}
       >
         <Link href="#contact" className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full 
-        outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'>
-            {/* onClick={() => {
-              setA
-            }} */}
+        outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
+            onClick={() => {
+            setActiveSection("Contact");
+            setLastClick(Date.now());
+            }}
+        >
             Contact me{" "}
         <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/>
         </Link>

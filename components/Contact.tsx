@@ -15,7 +15,7 @@ export default function Contact() {
 
   return (
     <motion.section className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
-    id="section"
+    id="contact"
     ref={ref}
     initial={{
         opacity: 0,
@@ -29,9 +29,9 @@ export default function Contact() {
     viewport={{
         once: true,
     }}>
-        <SectionHeading>Contact Me!</SectionHeading>
+        <SectionHeading>Contact</SectionHeading>
         <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please fill out the form below to contact me directly.
+        Please fill out the form below to get in touch with me directly!
       </p>
 
       <form className="mt-10 flex flex-col dark:text-black"

@@ -9,12 +9,12 @@ export default function About() {
   const {ref} = usePartInView("About");
     
   return (
-    <motion.section className="mb-24 max-w-[45rem] text-center leading-8 sm:mb-30 scroll-mt-28"
+    <motion.section className="mb-24 max-w-[45rem] text-center leading-10 sm:mb-32 scroll-mt-28"
     ref={ref}
+    id="about"
     initial={{ opacity: 0, y: 100 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.175 }}
-    id="about"
     >
         <SectionHeading>About Me</SectionHeading>
        <p className="mb-3">
