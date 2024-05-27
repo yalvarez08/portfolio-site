@@ -1,7 +1,7 @@
 
 import React from "react";
-import { FaPaperPlane } from "react-icons/fa";
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
+import { RiMailSendLine } from "react-icons/ri";
+import { useFormStatus } from "react-dom";
 
 export default function SubmitBtn() {
   const { pending } = useFormStatus();
@@ -19,7 +19,8 @@ export default function SubmitBtn() {
       ) : (
         <>
           Submit{" "}
-          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
+          <RiMailSendLine className="text-xs opacity-70 transition-all group-hover:translate-x-1 
+          group-hover:-translate-y-1" />{" "}
         </>
       )}
     </button>

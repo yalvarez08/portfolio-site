@@ -4,9 +4,14 @@ import React from 'react'
 import SectionHeading from './Section-Header'
 import { motion } from 'framer-motion';
 import { usePartInView } from '@/lib/hooks';
+import { sendEmail } from '@/email/EmailAction';
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import SubmitBtn from './SubmitBtn';
 
 export default function Contact() {
     const {ref} = usePartInView("Contact", 0.5);
+
 
   return (
     <motion.section className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
@@ -30,8 +35,19 @@ export default function Contact() {
       </p>
 
       <form className="mt-10 flex flex-col dark:text-black"
-        action={formData => {
-            console.log(formData);
+        action={async (formData) => {
+            const { data, error} = await sendEmail(formData);
+            
+            if (error) {
+                toast.error(error, {
+                    position: "top-center"
+                })
+                return;
+            }
+
+            toast.success("Email sent successfully!", {
+                position: "top-center"
+            });
         }}
       >
         <input

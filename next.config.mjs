@@ -9,7 +9,10 @@ const nextConfig = {
             pathname: "/ydcalvarez/**",
           }
         ],
-      },
+    },
+    experimental: {
+      serverActions: true,
+    }
 };
 
 export default nextConfig;
