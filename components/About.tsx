@@ -3,7 +3,10 @@
 import React from 'react'
 import SectionHeading from './Section-Header'
 import { motion } from 'framer-motion'
+import { Roboto_Mono } from 'next/font/google'
 import { usePartInView } from '@/lib/hooks'
+
+const robotoMono = Roboto_Mono({ subsets: ['latin'] })
 
 export default function About() {
   const {ref} = usePartInView("About");
@@ -18,7 +21,7 @@ export default function About() {
     >
         <SectionHeading>About Me</SectionHeading>
        <p>
-        <span className='font-medium'>I'm a full-stack developer based in North Carolina. After serving 5 years in the 
+        <span className={`${robotoMono.className} font-medium`}>I'm a full-stack developer based in North Carolina. After serving 5 years in the 
         Marine Corps as an All-Source Intelligence Analyst, I discovered my passion for software development.
         I'm more than halfway through earning my B.S. in Software Development & Security, and recently graduated 
         from Prime Digital Academy's Full-Stack Software Engineering program. Identifying gaps/issues and providing 

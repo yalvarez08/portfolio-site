@@ -7,7 +7,10 @@ import { usePartInView } from '@/lib/hooks';
 import { sendEmail } from '@/email/EmailAction';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { Roboto_Mono } from 'next/font/google'
 import SubmitBtn from './SubmitBtn';
+
+const robotoMono = Roboto_Mono({ subsets: ['latin'] })
 
 export default function Contact() {
     const {ref} = usePartInView("Contact", 0.5);
@@ -30,9 +33,9 @@ export default function Contact() {
         once: true,
     }}>
         <SectionHeading>Contact</SectionHeading>
-        <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please fill out the form below to get in touch with me directly!
-      </p>
+        <p className={`${robotoMono.className} text-gray-700 -mt-6 dark:text-white/80`}>
+          Please fill out the form below to get in touch with me directly!
+        </p>
 
       <form className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {

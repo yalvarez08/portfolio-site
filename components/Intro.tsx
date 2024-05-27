@@ -4,11 +4,14 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { Roboto_Mono } from 'next/font/google'
 import { useActiveSectionContext } from '@/context/ActiveSectionContext'
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { FaGithub } from 'react-icons/fa'
 import { usePartInView } from '@/lib/hooks'
+
+const robotoMono = Roboto_Mono({ subsets: ['latin'] })
 
 
 export default function Intro() {
@@ -48,8 +51,8 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
         > 
         
-        <p className="font-bold sm:text-4xl">Hi, I'm Yailene Alvarez.</p> 
-        <span>A software engineer who is passionate about building innovative and scalable 
+        <p className={`${robotoMono.className} font-bold sm:text-4xl`}>Hi, I'm Yailene Alvarez.</p> 
+        <span className={`${robotoMono.className}`}>A software engineer who is passionate about building innovative and scalable 
         solutions. My focus is in websites, application development, and system integrations.</span>
         <br/>
       </motion.h1>
