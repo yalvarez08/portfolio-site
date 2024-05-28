@@ -14,8 +14,8 @@ import { usePartInView } from '@/lib/hooks'
 const robotoMono = Roboto_Mono({ subsets: ['latin'] })
 
 
-export default function Intro() {
-  const {ref} = usePartInView("Home");
+export default function Home() {
+  const {ref} = usePartInView("Home", 0.5);
   const { setActiveSection, setLastClick } = useActiveSectionContext();
 
   return (
@@ -32,7 +32,7 @@ export default function Intro() {
                 height="190"
                 alt="Image of me."
                 priority={true}
-                className='h-32 w-32 object-cover rounded-full border-[0.35rem] border-white shadow-xl'
+                className='h-32 w-32 object-cover rounded-full border-[0.35rem] border-white-100 shadow-xl'
                 />
                 </motion.div>
             {/* image circle */}
@@ -46,12 +46,13 @@ export default function Intro() {
         </div>
 
         <motion.h1
-        className="mb-10 mt-4 px-4 text-lg font-medium !leading-[1.5] sm:text-2xl"
+        className="mb-10 mt-6 px-4 text-lg font-medium !leading-[1.5] sm:text-2xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         > 
         
         <p className={`${robotoMono.className} font-bold sm:text-4xl`}>Hi, I'm Yailene Alvarez.</p> 
+        <br/>
         <span className={`${robotoMono.className}`}>A software engineer who is passionate about building innovative and scalable 
         solutions. My focus is in websites, application development, and system integrations.</span>
         <br/>

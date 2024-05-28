@@ -23,7 +23,7 @@ export default function Skills() {
     const {ref} = usePartInView("Skills");
 
   return (
-    <section className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+    <section className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-28"
     id="skills"
     ref={ref}>
         <SectionHeading>Skills</SectionHeading>

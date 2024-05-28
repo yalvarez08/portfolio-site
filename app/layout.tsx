@@ -22,15 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={`${inter.className} bg-zinc-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-zinc-800 dark:text-zinc-50 dark:text-opacity-90`}>
-        <div className="bg-[#dabff8] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem]
-        w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#a02ca6]">
-        </div>
-        <div className="bg-[#c2faa6] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem]
-        w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] 
-        lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#4e8933]">
-        </div>
-
+      <body className={`${inter.className} inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:32px_32px] text-gray-950 relative 
+      pt-28 sm:pt-36 dark:bg-zinc-800 dark:bg-[radial-gradient(#B3B6B7_1px,transparent_1px)] dark:text-zinc-50`}>
+    
       <ThemeContext>
         <ActiveSectionContextProvider>
           <Header />
